@@ -2,10 +2,6 @@
 // 10의 배수일 때 n * 2000 할인
 
 const solution = (n, k) => {
-  let price = 0;
-  if (k % 10 === 0) {
-    price = 14000 * n - (2000 * k) / 10;
-  } else {
-    price = 14000 * n;
-  }
+  let price = 12000 * n + 2000 * (k - Math.floor(n / 10));
+  return price;
 };
