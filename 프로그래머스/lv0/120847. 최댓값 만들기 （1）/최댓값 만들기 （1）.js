@@ -9,5 +9,6 @@ function solution(numbers) {
     }
   }
 
-  return Math.max(...array);
+  //   return Math.max(...array);
+  return array.sort((a, b) => b - a).shift();
 }
