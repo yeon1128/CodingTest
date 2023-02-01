@@ -1,14 +1,13 @@
 function solution(n) {
-  const smallNumber = [];
-  let x = 2;
-  while (n !== 1) {
-    if (n % x === 0) {
-      smallNumber.push(x);
-      n /= x;
-      x = 2;
+  let answer = [];
+  let i = 2;
+  while (i <= n) {
+    if (n % i === 0) {
+      answer.push(i);
+      n /= i;
     } else {
-      x += 1;
+      i++;
     }
   }
-  return [...new Set(smallNumber)];
+  return [...new Set(answer)];
 }
