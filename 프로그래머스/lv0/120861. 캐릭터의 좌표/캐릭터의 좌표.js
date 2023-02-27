@@ -6,16 +6,16 @@ function solution(keyinput, board) {
   keyinput.forEach((e) => {
     switch (e) {
       case "left":
-        answer[0] !== -xMax && answer[0]--;
+        answer[0] > -xMax && answer[0]--;
         break;
       case "right":
-        answer[0] !== xMax && answer[0]++;
+        answer[0] < xMax && answer[0]++;
         break;
       case "up":
-        answer[1] !== yMax && answer[1]++;
+        answer[1] < yMax && answer[1]++;
         break;
       case "down":
-        answer[1] !== -yMax && answer[1]--;
+        answer[1] > -yMax && answer[1]--;
         break;
     }
   });
